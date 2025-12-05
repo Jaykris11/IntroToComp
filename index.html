@@ -3,276 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro To Computing | Group 5</title>
+    <title>Group 5 Events | Premium Experience</title>
+    
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">
-                <i class="fa-solid fa-ring logo-icon"></i>
-                <div class="logo-text">
-                    <span class="brand">Intro To Computing</span>
-                    <span class="tag">Group 5</span>
-                </div>
-            </div>
-            
-            <input type="checkbox" id="nav-toggle" class="nav-checkbox">
-            <label for="nav-toggle" class="menu-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </label>
-
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#packages">Collections</a></li>
-                <li><a href="#host">Host Jeff</a></li>
-                <li><a href="#contact" class="btn-nav">Book Date</a></li>
-            </ul>
+    <nav class="nav-pill" id="navbar">
+        <a href="#" class="nav-brand">Group 5 Events</a>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#packages">Collections</a>
+            <a href="#host">Host Jeff</a>
         </div>
+        <a href="#contact" class="btn-book">Book Date</a>
     </nav>
 
-    <header id="hero" class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
+    <div class="sticky-hero-wrapper" id="hero">
+        <video autoplay muted loop playsinline class="hero-bg">
             <source src="hero-bg.mp4.mp4" type="video/mp4">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920&auto=format&fit=crop" alt="Wedding Background">
         </video>
-        
-        <div class="hero-overlay"></div>
-        
-        <div class="hero-content fade-in-up">
-            <span class="pre-title">Creating Happiness & Unforgettable Moments</span>
-            <h1>Your Dream Wedding<br> <span class="gold-text">Starts Here</span></h1>
-            <p class="subtitle">Premium All-Inclusive Packages from ₱299K</p>
-            <div class="hero-btns">
-                <a href="#packages" class="btn btn-primary">View Packages</a>
-                <a href="#contact" class="btn btn-transparent">Inquire Now</a>
-            </div>
+        <div class="hero-content" id="heroText">
+            <span class="eyebrow">The Art of Celebration</span>
+            <h1>Unforgettable <br><span class="gold-italic">Moments.</span></h1>
+            <p>Premium hosting and styling for the modern couple.</p>
         </div>
-    </header>
+    </div>
 
-    <section id="packages" class="packages-section">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Wedding Collections</h2>
-                <div class="separator"><i class="fa-solid fa-heart"></i></div>
-                <p>Curated for 100 Guests. Fully upgraded styling and coordination.</p>
+    <div class="main-content">
+        
+        <section class="container intro-section">
+            <p class="intro-statement">
+                We don't just host events. <br>
+                We curate <span class="highlight">memories.</span>
+            </p>
+        </section>
+
+        <section id="packages" class="container">
+            <div class="section-header">
+                <h2>The Collections</h2>
+                <div class="separator"></div>
             </div>
 
-            <div class="package-grid">
-                
-                <div class="package-card fade-in-up delay-1">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=800&auto=format&fit=crop" alt="Silver Wedding Setup">
-                        <div class="pkg-name-overlay">SILVER</div>
+            <div class="bento-grid">
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=800" alt="Silver">
                     </div>
                     <div class="card-body">
-                        <div class="card-header">
-                            <h3>Silver Package</h3>
-                            <div class="price">₱299,000</div>
-                            <span class="pax">Good for 100 Pax</span>
-                        </div>
-                        
-                        <div class="scrollable-list">
-                            <ul class="features">
-                                <li class="highlight-item"><i class="fa-solid fa-star"></i> <strong>FREE VENUE:</strong> Luntian / Mountain Rock</li>
-                                <li><i class="fa-solid fa-check"></i> <strong>4 Main Courses</strong> (Fish, Pork, Beef, Chicken)</li>
-                                <li><i class="fa-solid fa-check"></i> Complete Upgraded Catering Setup</li>
-                                <li><i class="fa-solid fa-check"></i> Steamed Rice, Dessert & Bottomless Drinks</li>
-                                <li><i class="fa-solid fa-check"></i> Complete Flowers (Entourage & Church)</li>
-                                <li><i class="fa-solid fa-check"></i> Elegant Bridal Bouquet</li>
-                                <li><i class="fa-solid fa-car"></i> Bridal Car (Sedan or SUV)</li>
-                                <li><i class="fa-solid fa-microphone-lines"></i> Professional Host & Soloist</li>
-                                <li><i class="fa-solid fa-user-tie"></i> Uniformed Professional Coordinators</li>
-                                <li><i class="fa-solid fa-envelope"></i> 50pcs Elegant Invitations</li>
-                                <li><i class="fa-solid fa-brush"></i> Professional Hair & Makeup Artist</li>
-                                <li><i class="fa-solid fa-music"></i> Sounds & Lights</li>
-                                <li><i class="fa-solid fa-video"></i> Photo & Video with <strong>AVP</strong></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="freebies">
-                            <strong>Freebies:</strong> Pre-Nup Accessories, Party Poppers, Photobooth, 30pcs Giveaways, Prizes, Personalized Ampao.
-                        </div>
-                        <a href="#contact" class="btn btn-outline-dark">Select Silver</a>
+                        <h3>Silver</h3>
+                        <p class="price">₱299,000</p>
+                        <ul class="inclusions">
+                            <li><i class="fa-solid fa-check"></i> Venue: Luntian / Mountain Rock</li>
+                            <li><i class="fa-solid fa-check"></i> 4 Course Catering</li>
+                            <li><i class="fa-solid fa-check"></i> Professional Host</li>
+                        </ul>
+                        <a href="#contact" class="btn-outline">Inquire Silver</a>
                     </div>
                 </div>
 
-                <div class="package-card featured fade-in-up delay-2">
-                    <div class="badge-popular">Best Value</div>
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=800&auto=format&fit=crop" alt="Gold Wedding Setup">
-                        <div class="pkg-name-overlay">GOLD</div>
+                <div class="card featured">
+                    <div class="badge">Most Popular</div>
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=800" alt="Gold">
                     </div>
                     <div class="card-body">
-                        <div class="card-header">
-                            <h3>Gold Package</h3>
-                            <div class="price">₱399,000</div>
-                            <span class="pax">Good for 100 Pax</span>
-                        </div>
-                        
-                        <div class="scrollable-list">
-                            <ul class="features">
-                                <li class="highlight-item"><i class="fa-solid fa-shirt"></i> <strong>INCLUDED:</strong> Bridal Gown & Suit</li>
-                                <li><i class="fa-solid fa-check"></i> <strong>5 Main Courses</strong> (+ Seafoods)</li>
-                                <li><i class="fa-solid fa-check"></i> <strong>Grazing Table</strong> for 100 pax</li>
-                                <li><i class="fa-solid fa-check"></i> Complete Upgraded Catering Setup</li>
-                                <li><i class="fa-solid fa-check"></i> Steamed Rice, Dessert & Bottomless Drinks</li>
-                                <li><i class="fa-solid fa-check"></i> Complete Flowers (Entourage & Church)</li>
-                                <li><i class="fa-solid fa-car"></i> Bridal Car (Sedan or SUV)</li>
-                                <li><i class="fa-solid fa-microphone-lines"></i> Professional Host & Soloist</li>
-                                <li><i class="fa-solid fa-user-tie"></i> Uniformed Professional Coordinators</li>
-                                <li><i class="fa-solid fa-envelope"></i> 50pcs Elegant Invitations</li>
-                                <li><i class="fa-solid fa-brush"></i> Professional Hair & Makeup Artist</li>
-                                <li><i class="fa-solid fa-music"></i> Sounds & Lights</li>
-                                <li><i class="fa-solid fa-video"></i> Photo & Video with <strong>SDE (Same Day Edit)</strong></li>
-                            </ul>
-                        </div>
-
-                        <div class="freebies">
-                            <strong>Freebies:</strong> Pre-Nup Accessories, Party Poppers, Photobooth, 30pcs Giveaways, Prizes, Personalized Ampao.
-                        </div>
-                        <a href="#contact" class="btn btn-primary">Select Gold</a>
+                        <h3>Gold</h3>
+                        <p class="price gold-text">₱399,000</p>
+                        <ul class="inclusions">
+                            <li><i class="fa-solid fa-shirt"></i> <strong>Bridal Gown & Suit</strong></li>
+                            <li><i class="fa-solid fa-utensils"></i> Grazing Table</li>
+                            <li><i class="fa-solid fa-car"></i> Bridal Car</li>
+                            <li><i class="fa-solid fa-video"></i> SDE Video</li>
+                        </ul>
+                        <a href="#contact" class="btn-solid">Select Gold</a>
                     </div>
                 </div>
 
-                <div class="package-card fade-in-up delay-3">
-                    <div class="card-img">
-                        <img src="Platinum.jpg" alt="Platinum Fireworks Wedding">
-                        <div class="pkg-name-overlay">PLATINUM</div>
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="Platinum.jpg" onerror="this.src='https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800'" alt="Platinum">
                     </div>
                     <div class="card-body">
-                        <div class="card-header">
-                            <h3>Platinum Package</h3>
-                            <div class="price">₱499,000</div>
-                            <span class="pax">Good for 100 Pax</span>
-                        </div>
-                        
-                        <div class="scrollable-list">
-                            <ul class="features">
-                                <li class="highlight-item"><i class="fa-solid fa-explosion"></i> <strong>Indoor Fireworks Included</strong></li>
-                                <li><i class="fa-solid fa-guitar"></i> <strong>Acoustic Band</strong> (Host + Band)</li>
-                                <li><i class="fa-solid fa-shirt"></i> <strong>Bridal Gown & Suit</strong></li>
-                                <li><i class="fa-solid fa-check"></i> 5 Main Courses (+ Seafoods)</li>
-                                <li><i class="fa-solid fa-check"></i> Grazing Table for 100 pax</li>
-                                <li><i class="fa-solid fa-check"></i> Complete Upgraded Catering Setup</li>
-                                <li><i class="fa-solid fa-check"></i> Steamed Rice, Dessert & Bottomless Drinks</li>
-                                <li><i class="fa-solid fa-check"></i> Complete Flowers (Entourage & Church)</li>
-                                <li><i class="fa-solid fa-car"></i> Bridal Car (Sedan or SUV)</li>
-                                <li><i class="fa-solid fa-user-tie"></i> Uniformed Professional Coordinators</li>
-                                <li><i class="fa-solid fa-envelope"></i> 50pcs Elegant Invitations</li>
-                                <li><i class="fa-solid fa-brush"></i> Professional Hair & Makeup Artist</li>
-                                <li><i class="fa-solid fa-music"></i> Sounds & Lights</li>
-                                <li><i class="fa-solid fa-video"></i> Photo & Video with <strong>SDE</strong></li>
-                            </ul>
-                        </div>
-
-                        <div class="freebies">
-                            <strong>Freebies:</strong> Pre-Nup Accessories, Party Poppers, Photobooth, 30pcs Giveaways, Prizes, Personalized Ampao.
-                        </div>
-                        <a href="#contact" class="btn btn-outline-dark">Select Platinum</a>
+                        <h3>Platinum</h3>
+                        <p class="price">₱499,000</p>
+                        <ul class="inclusions">
+                            <li><i class="fa-solid fa-explosion"></i> <strong>Indoor Fireworks</strong></li>
+                            <li><i class="fa-solid fa-music"></i> Acoustic Band</li>
+                            <li><i class="fa-solid fa-wine-glass"></i> Premium Styling</li>
+                        </ul>
+                        <a href="#contact" class="btn-outline">Inquire Platinum</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="host" class="host-section">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Meet Your Host</h2>
-                <div class="separator"><i class="fa-solid fa-microphone"></i></div>
-            </div>
-
-            <div class="host-profile-grid">
-                <div class="host-left fade-in-up">
-                    <div class="host-photo-frame">
-                        <img src="462581268_1219645315800099_8596290525686649620_n.jpg" alt="Host Jeff">
-                    </div>
-                    <div class="host-contact-card">
-                        <h3>Host Jeff</h3>
-                        <p class="host-tagline">The Well-Rounded Emcee of the South</p>
-                        <div class="phone-display"><i class="fa-solid fa-phone"></i> 0953 192 7404</div>
+        <section id="host" class="container">
+            <div class="host-section">
+                <div class="host-visual">
+                    <div class="frame">
+                        <img src="462581268_1219645315800099_8596290525686649620_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800'" alt="Host Jeff">
                     </div>
                 </div>
 
-                <div class="host-right fade-in-up delay-1">
+                <div class="host-info">
+                    <span class="sub-title">The Voice of Your Event</span>
+                    <h2>Host Jeff</h2>
+                    <p class="bio">Experience the perfect balance of intellect and entertainment. Host Jeff ensures your event flows seamlessly with energy and class.</p>
+
                     <div class="info-block">
-                        <h4><i class="fa-solid fa-graduation-cap"></i> Professional Background</h4>
-                        <ul class="host-bio-list">
-                            <li><strong>University Professor</strong> at Batangas State University.</li>
-                            <li>Graduate of <strong>2 Bachelor's Degrees</strong> (BSEd English & BS Computer Science).</li>
-                            <li>Former <strong>Radio Disc Jockey</strong> (Citi Beat FM 102.3) & Anchor.</li>
-                            <li>Hosted the wedding of a Viral Couple in Biñan with <strong>VP Sara Duterte</strong>.</li>
-                            <li>Experience hosting 1000+ events across South Luzon.</li>
+                        <h4><i class="fa-solid fa-certificate"></i> Credentials</h4>
+                        <ul class="detail-list">
+                            <li><strong>University Professor</strong> at Batangas State University</li>
+                            <li>Graduate of <strong>2 Bachelor's Degrees</strong> (BSEd English & CS)</li>
+                            <li>Former <strong>Radio DJ</strong> (Citi Beat FM 102.3)</li>
+                            <li>Hosted for <strong>VP Sara Duterte</strong></li>
                         </ul>
                     </div>
 
-                    <div class="info-block">
-                        <h4><i class="fa-solid fa-tags"></i> Professional Fees</h4>
-                        <table class="rates-table">
-                            <tr><td>Corporate Event</td><td class="rate-price">₱17,000.00</td></tr>
-                            <tr class="highlight-row"><td>Wedding Hosting</td><td class="rate-price">₱15,000.00</td></tr>
-                            <tr><td>Special Day / Debut</td><td class="rate-price">₱15,000.00</td></tr>
-                        </table>
-                    </div>
-
-                    <div class="info-block">
-                        <h4><i class="fa-solid fa-gift"></i> Wedding Inclusions</h4>
-                        <div class="inclusions-grid">
-                            <span><i class="fa-solid fa-check-circle"></i> 2-3 Hours Hosting</span>
-                            <span><i class="fa-solid fa-check-circle"></i> Lively & Professional</span>
-                            <span><i class="fa-solid fa-check-circle"></i> Unlimited Consultation</span>
-                            <span><i class="fa-solid fa-music"></i> <strong>DJ / Spinner Included</strong></span>
+                    <div class="info-block rates-box">
+                        <h4><i class="fa-solid fa-tag"></i> Professional Fees</h4>
+                        <div class="rate-row">
+                            <span>Wedding Hosting</span>
+                            <span class="amount">₱15,000</span>
+                        </div>
+                        <div class="rate-row">
+                            <span>Corporate Event</span>
+                            <span class="amount">₱17,000</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-box">
-                <div class="contact-left">
-                    <h3>Let's Create Magic</h3>
-                    <p>Dates fill up quickly. Contact us today to secure your dream wedding.</p>
-                    <div class="contact-details">
-                        <div class="c-item"><i class="fa-solid fa-phone"></i> <span>0953 192 7404</span></div>
-                        <div class="c-item"><i class="fa-brands fa-facebook"></i> <span>Host Jeff-The Well - Rounded Emcee</span></div>
+        <section id="contact" class="contact-section">
+            <div class="form-container">
+                <h2>Secure The Date</h2>
+                <p>Dates fill up quickly. Let's begin planning your forever.</p>
+                
+                <form>
+                    <div class="input-group">
+                        <input type="text" required placeholder="Your Name">
+                        <input type="date" required>
                     </div>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <div class="input-group"><input type="text" required><label>Your Name</label></div>
-                        <div class="input-group"><input type="date" required></div>
-                        <div class="input-group">
-                            <select>
-                                <option value="" disabled selected>Select Package</option>
-                                <option>Silver (299k)</option>
-                                <option>Gold (399k)</option>
-                                <option>Platinum (499k)</option>
-                                <option>Host Only</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send Inquiry</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <select required>
+                        <option value="" disabled selected>Select Package</option>
+                        <option>Silver Collection (299k)</option>
+                        <option>Gold Collection (399k)</option>
+                        <option>Platinum Collection (499k)</option>
+                        <option>Host Only (15k)</option>
+                    </select>
+                    <button type="submit">Submit Inquiry</button>
+                </form>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h4>Creative Educators</h4>
-                <p>&copy; 2023 Creative Educators. All Rights Reserved.</p>
+                <div class="contact-footer">
+                    <p><i class="fa-solid fa-phone"></i> 0953 192 7404</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <footer>
+            &copy; 2024 Group 5 Events. Created with Passion.
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const heroText = document.getElementById('heroText');
+            const navbar = document.getElementById('navbar');
+
+            // 1. Fade Hero Text
+            // As user scrolls, opacity drops. Scale shrinks slightly for depth.
+            const opacity = 1 - (scrollPosition / 500);
+            const scale = 1 - (scrollPosition / 2000);
+
+            if (opacity >= 0) {
+                heroText.style.opacity = opacity;
+                heroText.style.transform = `scale(${scale})`;
+            }
+
+            // 2. Nav Bar Transition
+            // Add 'scrolled' class when page moves 50px down
+            if (scrollPosition > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 
 </body>
 </html>
