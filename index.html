@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 5 Events | Premium Experience</title>
-    
     <link rel="stylesheet" href="styles.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -25,9 +23,10 @@
     </nav>
 
     <div class="sticky-hero-wrapper" id="hero">
-        <video autoplay muted loop playsinline class="hero-bg">
+        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920&auto=format&fit=crop" class="hero-bg">
             <source src="hero-bg.mp4.mp4" type="video/mp4">
         </video>
+        
         <div class="hero-content" id="heroText">
             <span class="eyebrow">The Art of Celebration</span>
             <h1>Unforgettable <br><span class="gold-italic">Moments.</span></h1>
@@ -122,7 +121,8 @@
                             <li><strong>University Professor</strong> at Batangas State University</li>
                             <li>Graduate of <strong>2 Bachelor's Degrees</strong> (BSEd English & CS)</li>
                             <li>Former <strong>Radio DJ</strong> (Citi Beat FM 102.3)</li>
-                            <li>Hosted for <strong>VP Sara Duterte</strong></li>
+                            <li>Hosted for <strong>VP Sara Duterte</strong> (Viral Wedding)</li>
+                            <li>1,000+ Events Hosted across South Luzon</li>
                         </ul>
                     </div>
 
@@ -136,7 +136,21 @@
                             <span>Corporate Event</span>
                             <span class="amount">₱17,000</span>
                         </div>
+                        <div class="rate-row">
+                            <span>Debut / Birthday</span>
+                            <span class="amount">₱15,000</span>
+                        </div>
                     </div>
+
+                    <div class="info-block">
+                        <h4><i class="fa-solid fa-star"></i> Included in Fee</h4>
+                        <div class="features-grid">
+                            <span><i class="fa-solid fa-music"></i> DJ / Spinner</span>
+                            <span><i class="fa-solid fa-clock"></i> Unlimited Consult</span>
+                            <span><i class="fa-solid fa-check"></i> Program Management</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -163,12 +177,13 @@
 
                 <div class="contact-footer">
                     <p><i class="fa-solid fa-phone"></i> 0953 192 7404</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Host Jeff - The Well Rounded Emcee</p>
                 </div>
             </div>
         </section>
 
         <footer>
-            &copy; 2024 Group 5 Events. Created with Passion.
+            &copy; Intro To Computing Semestral Project. GROUP 5
         </footer>
 
     </div>
@@ -179,8 +194,6 @@
             const heroText = document.getElementById('heroText');
             const navbar = document.getElementById('navbar');
 
-            // 1. Fade Hero Text
-            // As user scrolls, opacity drops. Scale shrinks slightly for depth.
             const opacity = 1 - (scrollPosition / 500);
             const scale = 1 - (scrollPosition / 2000);
 
@@ -189,8 +202,6 @@
                 heroText.style.transform = `scale(${scale})`;
             }
 
-            // 2. Nav Bar Transition
-            // Add 'scrolled' class when page moves 50px down
             if (scrollPosition > 50) {
                 navbar.classList.add('scrolled');
             } else {
