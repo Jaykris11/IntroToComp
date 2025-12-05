@@ -29,7 +29,7 @@ ul { list-style: none; }
 /* --- HERO SECTION --- */
 .hero {
     height: 100vh;
-    height: 100dvh; /* Mobile Fix */
+    height: 100dvh; /* Fix for Mobile Browsers */
     position: relative;
     display: flex; align-items: center; justify-content: center;
     text-align: center; color: var(--white);
@@ -53,7 +53,12 @@ ul { list-style: none; }
 /* --- PACKAGES --- */
 .packages-section { padding: 80px 0; }
 .section-title { text-align: center; margin-bottom: 50px; }
-.package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.package-grid { 
+    display: grid; 
+    /* Default to 3 columns on Desktop */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+}
 
 .package-card {
     background: var(--white); border-radius: 10px; overflow: hidden;
@@ -80,12 +85,13 @@ ul { list-style: none; }
 .contact-section { padding: 80px 0; background: var(--purple-dark); }
 .contact-box { background: var(--white); display: flex; border-radius: 20px; overflow: hidden; }
 
-/* FIX: Force white text on the dark left side */
-.contact-left { flex: 1; background: #222; padding: 50px; color: var(--white); }
-.contact-left h3 { color: var(--white); margin-bottom: 15px; font-size: 2rem; }
-.contact-left p { color: #ccc; margin-bottom: 25px; }
-.contact-left .c-item { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: var(--white); }
+/* FIX: Explicitly set text colors for dark background */
+.contact-left { flex: 1; background: #222; padding: 50px; }
+.contact-left h3 { color: #ffffff !important; margin-bottom: 15px; font-size: 2rem; }
+.contact-left p { color: #dddddd !important; margin-bottom: 25px; }
+.contact-left .c-item { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
 .contact-left .c-item i { color: var(--gold-solid); }
+.contact-left .c-item span { color: #ffffff !important; }
 
 .contact-right { flex: 1.5; padding: 50px; }
 .input-group { margin-bottom: 20px; position: relative; }
@@ -105,19 +111,6 @@ ul { list-style: none; }
 /* --- FOOTER --- */
 footer { background: #111; color: #888; padding: 40px 0; text-align: center; border-top: 3px solid var(--gold-solid); }
 
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 768px) {
-    .host-profile-grid { grid-template-columns: 1fr; }
-    .contact-box { flex-direction: column; }
-    .contact-left, .contact-right { padding: 30px; }
-    .hero h1 { font-size: 2.5rem; }
-    
-    .package-grid { grid-template-columns: 1fr; } /* Stack cards */
-    .package-card.featured { transform: scale(1); } /* Remove scale on mobile */
-    
-    .nav-links { display: none; } /* Add toggle logic or use JS-less hover menu for simplicity in pure CSS if preferred, or keep the checkbox hack */
-}
-
 /* --- NAVIGATION STYLES --- */
 .navbar { position: sticky; top: 0; width: 100%; background: rgba(255,255,255,0.95); padding: 15px 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 .nav-content { display: flex; justify-content: space-between; align-items: center; }
@@ -126,7 +119,22 @@ footer { background: #111; color: #888; padding: 40px 0; text-align: center; bor
 .nav-checkbox { display: none; }
 .menu-toggle { display: none; }
 
+/* --- RESPONSIVE MOBILE FIXES --- */
+@media (max-width: 992px) {
+    .package-grid { grid-template-columns: repeat(2, 1fr); }
+    .host-profile-grid { grid-template-columns: 1fr; }
+    .contact-box { flex-direction: column; }
+}
+
 @media (max-width: 768px) {
+    /* Stack Grid on Mobile */
+    .package-grid { grid-template-columns: 1fr; } 
+    .package-card.featured { transform: scale(1); } /* Remove scale effect */
+    
+    .hero h1 { font-size: 2.5rem; }
+    .contact-left, .contact-right { padding: 30px; }
+    
+    /* Mobile Menu */
     .menu-toggle { display: block; cursor: pointer; }
     .bar { display: block; width: 25px; height: 3px; background: var(--dark); margin: 5px; }
     .nav-links {
